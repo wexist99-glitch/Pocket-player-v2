@@ -86,11 +86,11 @@ body.vid{padding-bottom:calc(290px + 30vh)}
 .ol select{background:var(--hover);color:var(--ink);border:0;border-radius:8px;padding:8px}
 li .fav{width:36px;flex:none;justify-content:center;color:var(--mute);font-size:1.1rem}
 li .fav.on{color:var(--acc)}
-:root{--bg:#0a0a0c;--panel:#141417;--hover:#222228;--mute:#a1a1ab;--acc:#ff6a3d}
+:root{--bg:#0a0a0c;--panel:#141417;--hover:#222228;--mute:#a1a1ab;--acc:#ff6a3d;--acc2:#ff6a3d}
 html,body{background:linear-gradient(color-mix(in srgb,var(--acc) 24%,#0a0a0c),var(--bg) 300px) no-repeat,var(--bg);font-family:system-ui,"Segoe UI",Roboto,sans-serif}
 h1{font-size:1.7rem;display:flex;align-items:center}
-h1::before{content:"";display:inline-block;width:.9em;height:.9em;margin-right:10px;background:var(--acc);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill-rule='evenodd' d='M30 0A70 30 0 0 1 100 30A70 70 0 0 1 30 100A30 70 0 0 1 0 30A30 30 0 0 1 30 0ZM40 30L40 70L72 50Z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill-rule='evenodd' d='M30 0A70 30 0 0 1 100 30A70 70 0 0 1 30 100A30 70 0 0 1 0 30A30 30 0 0 1 30 0ZM40 30L40 70L72 50Z'/%3E%3C/svg%3E") center/contain no-repeat}
-.add,.dl{background:var(--acc);color:#111}
+h1::before{content:"";display:inline-block;width:.9em;height:.9em;margin-right:10px;background:linear-gradient(135deg,var(--acc),var(--acc2));-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill-rule='evenodd' d='M30 0A70 30 0 0 1 100 30A70 70 0 0 1 30 100A30 70 0 0 1 0 30A30 30 0 0 1 30 0ZM40 30L40 70L72 50Z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill-rule='evenodd' d='M30 0A70 30 0 0 1 100 30A70 70 0 0 1 30 100A30 70 0 0 1 0 30A30 30 0 0 1 30 0ZM40 30L40 70L72 50Z'/%3E%3C/svg%3E") center/contain no-repeat}
+.add,.dl{background:linear-gradient(135deg,var(--acc),var(--acc2));color:#111}
 .vbtn{border:0;border-radius:12px;background:var(--hover);padding:9px 14px}
 .search{border-radius:12px;background:var(--panel)}
 .chips{display:flex;gap:8px;margin:18px 0 4px;overflow-x:auto}
@@ -104,7 +104,7 @@ li.cur .n.th{color:#fff;box-shadow:0 0 0 2px var(--acc)}
 input[type=range]{height:5px;background:linear-gradient(90deg,var(--acc) var(--p,0%),#3a3a42 var(--p,0%))}
 input[type=range]::-webkit-slider-thumb{background:var(--acc)}
 input[type=range]::-moz-range-thumb{background:var(--acc)}
-.ctl button.big,.ctl button.big:hover{background:var(--acc);color:#111;border-radius:18px}
+.ctl button.big,.ctl button.big:hover{background:linear-gradient(135deg,var(--acc),var(--acc2));color:#111;border-radius:18px}
 body{padding-left:78px}
 #rail{position:fixed;z-index:5;top:calc(env(safe-area-inset-top,0px) + 18px);left:calc(50% - min(50vw,280px) + 8px);display:flex;flex-direction:column;gap:8px;width:58px}
 .nv{display:flex;flex-direction:column;align-items:center;gap:3px;padding:9px 0;border:0;border-radius:14px;background:transparent;color:var(--mute);font:600 .65rem system-ui,sans-serif;cursor:pointer}
@@ -189,7 +189,7 @@ li .addpl{width:36px;flex:none;justify-content:center;color:var(--mute);font-siz
   <label class="ol">Crossfade <select id="xfade"><option value="0">Off</option><option value="2">2 sec</option><option value="4">4 sec</option><option value="8">8 sec</option></select></label>
   <label class="ol">Volume leveling <input type="checkbox" id="level"></label>
   <label class="ol">Sleep timer <select id="slp"><option value="0">Off</option><option value="15">15 min</option><option value="30">30 min</option><option value="60">60 min</option></select></label>
-  <label class="ol">Color <select id="clr"><option value="#ff6a3d">Coral</option><option value="#8b7bff">Violet</option><option value="#2dd4bf">Teal</option><option value="#f5c542">Gold</option></select></label>
+  <label class="ol">Color <select id="clr"><option value="#ff6a3d">Coral</option><option value="#8b7bff">Violet</option><option value="#2dd4bf">Teal</option><option value="#f5c542">Gold</option><option value="#ff4d6d">Rose</option><option value="#4da3ff">Sky</option><option value="#7ee787">Mint</option><option value="#c084fc">Lilac</option><option value="#ffd166">Amber</option><option value="#64dfdf">Aqua</option><option value="#f472b6">Pink</option><option value="#9ca3af">Slate</option><option value="#ff6a3d,#ffd166">Sunset</option><option value="#4da3ff,#64dfdf">Ocean</option><option value="#8b7bff,#f472b6">Berry</option><option value="#ff4d6d,#ffd166">Fire</option><option value="#2dd4bf,#7ee787">Forest</option><option value="#c084fc,#4da3ff">Dusk</option></select></label>
   <label class="ol">Favorites only <input type="checkbox" id="favonly"></label>
   <button id="ren" class="vbtn">Rename current song</button>
   <h2>Backup</h2>
@@ -637,13 +637,17 @@ window.addEventListener('pagehide',saveStats);
 /* ---------- options, favorites, resume, sleep timer, rename ---------- */
 var OK='pp-opts',opts={sort:'az',spd:'1',clr:'#ff6a3d',fav:false,xfade:'0',level:false},favs={},played={},resumePos=0,lastPos=0,sleepT=null;
 try{var os=JSON.parse(localStorage.getItem(OK)||'null');if(os)for(var kk in os)opts[kk]=os[kk]}catch(e){}
-if(['#ff6a3d','#8b7bff','#2dd4bf','#f5c542'].indexOf(opts.clr)<0)opts.clr='#ff6a3d';
+if(!/^#[0-9a-f]{6}(,#[0-9a-f]{6})?$/i.test(opts.clr||''))opts.clr='#ff6a3d';
 try{favs=JSON.parse(localStorage.getItem('pp-favs')||'{}')||{}}catch(e){}
 function saveOpts(){try{localStorage.setItem(OK,JSON.stringify(opts))}catch(e){}}
 function savePos(){if(i<0||!q[i])return;try{localStorage.setItem('pp-last',JSON.stringify({id:q[i].id,pos:a.currentTime}))}catch(e){}}
 function readLast(){try{return JSON.parse(localStorage.getItem('pp-last')||'null')}catch(e){return null}}
 function setSpeed(r){r=Number(r)||1;a.defaultPlaybackRate=a.playbackRate=r;V.defaultPlaybackRate=V.playbackRate=r}
-function accent(c){document.documentElement.style.setProperty('--acc',c)}
+function accent(c){
+  var parts=(c||'').split(',');
+  document.documentElement.style.setProperty('--acc',parts[0]);
+  document.documentElement.style.setProperty('--acc2',parts[1]||parts[0]);
+}
 function fav(n){var id=q[n].id;if(favs[id])delete favs[id];else favs[id]=1;try{localStorage.setItem('pp-favs',JSON.stringify(favs))}catch(e){}render()}
 $('sort').value=opts.sort;$('spd').value=opts.spd;$('clr').value=opts.clr;$('favonly').checked=!!opts.fav;accent(opts.clr);$('xfade').value=opts.xfade;$('level').checked=!!opts.level;
 var PGS=['pg-lib','pg-add','stats','opts','pg-pl'];
